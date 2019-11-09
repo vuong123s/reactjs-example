@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- all component React has render in root -->
+    <div id="root">
+        <ul id="list-book">
+
+        </ul>
+    </div>
+
+    <!-- cdn link React  -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+    <script>
+        // Viết ra danh sách các cuốn sách mà bạn thích sử dụng các React element ul, li (dùng React.createElement)
+        let Book1 = React.createElement('li', null, 'Code Dạo Ký Sự');
+        let Book2 = React.createElement('li', null, 'Kẻ Đi Lên Mây, Người Bước Xuống Đất ');
+        const Book3 = React.createElement('li', null, 'Những Lời nói vô nghĩa');
+
+        const Book4 = React.createElement('li', null, 'Chúng ta sống trong 2 thế giới');
+        const Book5 = React.createElement('li', null, 'Suy nghĩ đơn giản không giúp cuộc sống bạn đơn giản');
+        const Book6 = React.createElement('li', null, 'Làm vì tiền');
+
+        const Book = [Book1, Book2, Book3, Book4, Book5, Book6];
+
+        const listBookFavorite = document.getElementById('list-book');
+        ReactDOM.render(Book, listBookFavorite);
+    </script>
+
+</body>
+
+</html>
