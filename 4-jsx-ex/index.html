@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- all component React has render in "root" -->
+    <div id="root"></div>
+
+    <!-- cdn link React  -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+    <!-- babel script compiler jsx -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- example Hello Word! -->
+    <script type="text/babel">
+
+        const Title = <tr><th>Giờ</th><th>Hoạt động</th></tr>;
+        const Work1 = <tr><td>22h -> 4h40'</td><td>Ngủ</td></tr>;
+        const Work2 = <tr>
+                        <td>4h40' -> 6h</td>
+                        <td>Learn Lesson CodersX</td>
+                      </tr>;
+        const Work3 = <tr>
+                        <td>4h40' -> 6h</td>
+                        <td>Learn Lesson CodersX</td>
+                      </tr>;
+        const Work4 = <tr>
+                        <td>6h' -> 6h50</td>
+                        <td>Rửa mặt, vệ sinh, ăn sáng</td>
+                      </tr>;
+        const Work5 =   <tr>
+                            <td>6h50' -> 11h</td>
+                            <td>Học trên trường</td>
+                        </tr>;
+        const Work6 = <tr>
+                            <td>11h -> 12h</td>
+                            <td>Mua cơm và ăn trưa</td>
+                        </tr>;
+        const Work7 = <tr>
+                            <td>12h -> 12h50'</td>
+                            <td>thư giản, giải trí, coi phim</td>
+                        </tr>;
+        const Work8 = <tr>
+                            <td>12h50' -> 5h</td>
+                            <td>Học trên trường</td>
+                        </tr>;
+		const Work9 =  <tr>
+                        <td>5h -> 6h</td>
+                        <td>Ăn tối</td>
+                      </tr>;
+       	const Work10 =   <tr>
+                            <td>6h -> 10h</td>
+                            <td>Học bài</td>
+                          </tr>;
+  
+  
+        const App = React.createElement('table', null, Title, Work1, Work2, Work3, Work4, Work5, Work6, Work7, Work8, Work9, Work10);
+
+        const root = document.getElementById('root');
+        ReactDOM.render(App, root);
+    </script>
+</body>
+
+</html>
