@@ -11,13 +11,18 @@ class App extends Component {
             { title: 'Đi đổ xăng' } 
         ];
     }
+    
     render() {
         return (
             <div className="App">
                 {
-                    this.TodoItems.map((item, index) => 
+                    this.TodoItems.length > 0 && this.TodoItems.map((item, index) => 
                         <TodoItem key={index} item={item} />
                     )
+                }
+
+                {
+                    this.TodoItems.length === 0 && 'Nothing here.'
                 }
             </div>
         );

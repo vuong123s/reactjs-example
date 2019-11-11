@@ -8,7 +8,6 @@ class TodoItem extends Component {
         let className = 'TodoItem';
 
         if (item.isComplete) {
-            // className += ' TodoItem-complete';
             className = classNames('TodoItem', 'TodoItem-complete');
         }
 
