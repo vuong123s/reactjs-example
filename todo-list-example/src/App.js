@@ -6,18 +6,18 @@ class App extends Component {
     constructor() {
         super();
         this.TodoItems = [
-            'Mua bim bim',
-            'Đi đá bóng',
-            'Đi đổ xăng'
+            { title: 'Mua bim bim', isComplete: true },
+            { title: 'Đi đá bóng' },
+            { title: 'Đi đổ xăng' } 
         ];
     }
     render() {
         return (
             <div className="App">
                 {
-                    this.TodoItems.map((item, index) => {
-                        return <TodoItem key={index} title={item} />
-                    })
+                    this.TodoItems.map((item, index) => 
+                        <TodoItem key={index} item={item} />
+                    )
                 }
             </div>
         );
